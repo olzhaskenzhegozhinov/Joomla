@@ -89,7 +89,18 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/md_sty
             var resetTitle='<?php echo JText::_('TPL_BEEZ5_REVERT_STYLES_TO_DEFAULT', true); ?>';
             var smallerTitle='<?php echo JText::_('TPL_BEEZ5_DECREASE_SIZE', true); ?>';
 		</script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="jquery.lazyscript.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+jQuery(window).lazyScript({
+selectorClass: 'lazy',
+callback: jQuery.noop,
+threshold: 0,
+scrollInterval: 10
+});
+});
+</script>
 	</head>
 
 	<body>
